@@ -5,6 +5,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  word-wrap: break-word;
 }
 
 nav,
@@ -112,4 +113,9 @@ input {
 }
 .AddTodo input:nth-child(2) {
   margin-top: 30px;
+}
+textarea {
+  width: var(--width);
+  margin-top: 30px;
+  aspect-ratio: 1/.3;
 }
