@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 
-const AddTodo = ({handler}) => {
+const AddTodo = ({state ,handler}) => {
     const [data, setData] = useState({})
 
  
@@ -23,8 +23,9 @@ const AddTodo = ({handler}) => {
         <div className='AddTodo'>
             <form onSubmit={handleSubmit}>
                 <input type="text" name='title'  onChange={handleChange}/>
-                <input type="text" name='desc'  onChange={handleChange}/>
-                <button type='submit'>ADD</button>
+                <textarea type="text" name='desc'  onChange={handleChange}/>
+                <button type='submit' >ADD</button>
+                <button type='submit' onClick={state}>CANCEL</button>
             </form>
         </div>
     </div>
