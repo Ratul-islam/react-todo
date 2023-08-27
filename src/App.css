@@ -1,0 +1,115 @@
+:root {
+  --width: 60%;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav,
+.contentSec,
+.AddTodo {
+  width: var(--width);
+  margin: 20px auto;
+}
+.contentSec {
+  display: flex;
+  flex-wrap: wrap;
+}
+nav form {
+  position: relative;
+}
+nav>div {
+  display: flex;
+  justify-content: space-between;
+}
+nav input {
+  width: 100%;
+  aspect-ratio: 25/1;
+  margin-block: 20px;
+  border-radius: 50px;
+  padding-inline-start: 20px;
+  font-size: clamp(.5rem, 2vw, 1.2rem); 
+  outline: none;
+  border: 1px solid black;
+}
+nav input:focus,
+nav input:not(:placeholder-shown) {
+  background-color: #0000ff20;
+}
+nav button {
+  position: absolute;
+  right: 1%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  font-size: clamp(0.1rem, 2.5vw, 1.4rem); 
+  color: #0000008f;
+  outline: none;
+  height: max-content;
+}
+
+h2 {
+  font-size: clamp(1rem, 2.5vw, 2rem);
+}
+input {
+  outline: none;
+}
+.todo>div {
+  display: flex;
+  justify-content: space-between;
+}
+.todo {
+  margin: 10px;
+  width: clamp(100px, 10vw, 200px);
+  padding: 20px;
+  flex: 1;
+  border-radius: calc(clamp(100px, 10vw, 200px)*.1);
+  background-color: cadetblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.todo>p {
+  margin-top: 20px;
+}
+.todo button,
+.AddTodo button {
+  padding: calc(clamp(100px, 10vw, 200px)*.04) calc(clamp(100px, 10vw, 200px)*.1);
+  border: none;
+  background-color: red;
+  color: white;
+  position: relative;
+  bottom: 0%;
+  margin-top: 10px;
+  max-width: max-content;
+  cursor: pointer;
+}
+.todo button:last-child,
+.AddTodo button {
+  background-color: rgba(0, 0, 255, 0.429);
+}
+.add {
+  opacity: .5;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add:hover {
+  opacity: 1;
+}
+.AddTodo form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.AddTodo input {
+  width: var(--width);
+  aspect-ratio: 18/1;;
+}
+.AddTodo input:nth-child(2) {
+  margin-top: 30px;
+}
